@@ -21,10 +21,11 @@ const users = [
   },
   {
     id: 3,
-    name: "Ronald",
-    username: "RonRonRon",
-    email: "mronald@example.com",
+    name: "D",
+    username: "DMann",
+    email: "DMann@example.com",
   },
 ];
 
-module.exports = users;
+// module.exports = users;
+export default users
