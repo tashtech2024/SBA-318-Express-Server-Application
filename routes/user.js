@@ -6,7 +6,7 @@ import users from "../data/user.js"
 router
     .route("/")
     .get((req, res) =>{
-    res.json(users)
+    res.render("index")
 })
     .post((req, res) =>{
         if (req.body.name && req.body.username && req.body.email){

@@ -1,11 +1,18 @@
 import express from "express"
+import bodyParser from "body-parser";
 import users from "./routes/user.js";
 import posts from "./routes/post.js";
 import comments from "./routes/comments.js"
 const app = express();
 const port = 3000;
 
+
+
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'))
 
 function middleware1 (req, res, next) {
   console.log('I am a middleware');
@@ -52,6 +59,3 @@ app.listen(port, ()=>{
   console.log(`Server listening on port: ${port}`);
 })
 
-// app.post();
-
-// * Trying to add photo, but eror is happening 
