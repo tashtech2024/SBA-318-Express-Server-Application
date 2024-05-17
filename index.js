@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static('public'))
 
 function middleware1 (req, res, next) {
-  console.log('I am a middleware');
+  console.log('Connection Successful');
   
   const errObj = new Error('Sorry, Try Again!'); 
   
